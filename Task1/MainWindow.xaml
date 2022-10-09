@@ -1,0 +1,290 @@
+﻿<Window x:Class="Task1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="1200">
+    <Window.Resources>
+        <Style x:Key="header">
+            <Setter Property="Paragraph.TextAlignment" Value="Center"/>
+            <Setter Property="Paragraph.FontSize" Value="40"/>
+            <Setter Property="Paragraph.FontFamily" Value="Calibri Light"/>
+        </Style>
+        <Style x:Key="subtitle">
+            <Setter Property="Paragraph.TextAlignment" Value="Left"/>
+            <Setter Property="Paragraph.FontSize" Value="30"/>
+            <Setter Property="Paragraph.FontFamily" Value="Calibri Light"/>
+        </Style>
+        <Style x:Key="standart">
+            <Setter Property="Paragraph.TextAlignment" Value="Justify"/>
+            <Setter Property="Paragraph.FontSize" Value="20"/>
+            <Setter Property="Paragraph.FontFamily" Value="Calibri Light"/>
+            <Setter Property="Paragraph.TextIndent" Value="30"/>
+        </Style>
+        <Style x:Key="table" BasedOn="{StaticResource standart}">
+            <Setter Property="Paragraph.TextIndent" Value="0"/>
+        </Style>
+        <Style x:Key="border">
+            <Setter Property="Border.BorderThickness" Value="0"/>
+            <Setter Property="Border.CornerRadius" Value="25"/>
+        </Style>
+    </Window.Resources>
+    <Grid >
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFF1F1F1" Offset="0"/>
+                <GradientStop Color="#FFB4B4B4" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <FlowDocumentReader ViewingMode="Scroll">
+            <FlowDocument ColumnWidth="400" IsColumnWidthFlexible="True">
+                <Paragraph Style="{StaticResource header}" Margin="5">
+                    Грузия
+                </Paragraph>
+                <BlockUIContainer>
+                    <Separator Margin="50,0,50,0" Background="#FF979797"/>
+                </BlockUIContainer>
+                <Table>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource standart}">
+                                    <Floater Width="500" Padding="0">
+                                        <BlockUIContainer>
+                                            <Border Height="310" Style="{StaticResource border}">
+                                                <Border.Background>
+                                                    <ImageBrush Stretch="UniformToFill" ImageSource="image\flag.png" />
+                                                </Border.Background>
+                                            </Border>
+                                        </BlockUIContainer>
+                                    </Floater>
+                                </Paragraph>
+                                <Paragraph Style="{StaticResource standart}">
+                                    <Run FontFamily="Calibri Bold">Грузия</Run>
+                                    <Run>- государство в юго-западной части Кавказа. Это небольшая страна в Закавказье на восточном побережье Чёрного моря, которая находится на стыке Европы и Азии. Грузия граничит с Россией на севере и востоке, Турцией и Арменией на юге, Азербайджаном на юго-востоке. Географически страна относится к Передней Азии и Ближнему Востоку, хотя в настоящее время государство рассматривается как часть Восточной Европы. Грузия - парламентская республика. Более 80% населения исповедует православие.</Run>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource standart}">
+                                    <Floater Width="520" HorizontalAlignment="Left" Padding="0">
+                                        <BlockUIContainer>
+                                            <Border Height="300" Style="{StaticResource border}">
+                                                <Border.Background>
+                                                    <ImageBrush Stretch="UniformToFill" ImageSource="image\1.jpg" />
+                                                </Border.Background>
+                                            </Border>
+                                        </BlockUIContainer>
+                                    </Floater>
+                                </Paragraph>
+                                <Paragraph Style="{StaticResource standart}">
+                                    <Run>Несмотря на небольшие размеры, Грузия страна контрастов и удивительного разнообразия. Здесь можно увидеть потрясающие горные пейзажи, посетить замечательные древние города, монастыри и церкви, отдохнуть на курортах Чёрного моря. В греческой мифологии на территории Грузии хранилось Золотое руно, а археологические находки свидетельствуют о том, что она является древнейшим винодельческим регионом (были найдены образцы вин, датируемых шестым тысячелетием до нашей эры). Грузия - это удивительно живописная страна с гостеприимными жителями, вкусной кухней, богатой историей и культурой.</Run>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+                <Paragraph Style="{StaticResource subtitle}">
+                    Полезная информация о Грузии
+                </Paragraph>
+                <List MarkerStyle="Square">
+                    <ListItem>
+                        <Paragraph Style="{StaticResource standart}">
+                            Официальный язык - грузинский.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph Style="{StaticResource standart}">
+                            Валюта - грузинский лари.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph Style="{StaticResource standart}">
+                            Виза - не нужна на срок до 360 дней.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph Style="{StaticResource standart}">
+                            Население - более 3.7 млн. человек.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph Style="{StaticResource standart}">
+                            Площадь - 69 700 кв. км.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph Style="{StaticResource standart}">
+                            Столица -
+                            <Hyperlink NavigateUri="https://ru.wikipedia.org/wiki/Тбилиси">
+                                Тбилиси.
+                            </Hyperlink>
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph Style="{StaticResource standart}">
+                            Часовой пояс - UTC +4.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph Style="{StaticResource standart}">
+                            В Грузии имеется три памятника Всемирного наследия ЮНЕСКО.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph Style="{StaticResource standart}">
+                            Грузия - одна из самых безопасных стран в мире.
+                        </Paragraph>
+                    </ListItem>
+                </List>
+                <Paragraph Style="{StaticResource subtitle}">
+                    География и климат
+                </Paragraph>
+                <Table>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource standart}">
+                                    <Floater Width="520" HorizontalAlignment="Right" Padding="0">
+                                        <BlockUIContainer>
+                                            <Border Height="400" Style="{StaticResource border}">
+                                                <Border.Background>
+                                                    <ImageBrush Stretch="UniformToFill" ImageSource="image\2.jpg" />
+                                                </Border.Background>
+                                            </Border>
+                                        </BlockUIContainer>
+                                    </Floater>
+                                </Paragraph>
+                                <Paragraph Style="{StaticResource standart}">
+                                    <Run>Грузия расположена в Закавказье и омывается водами Чёрного моря. Северная часть страны - это горы Большого Кавказа. Юг страны занимают более низкие хребты Малого Кавказа. Высочайшие вершины Грузии - горы Шхара (5068 м) и Казбек (5033 м). Ближе к побережью рельеф становится более спокойный и образуется Колхидская низменность. Черноморское побережье в Грузии имеет протяжённость чуть более 100 км. Крупнейшие реки Грузии: Кура, Риони, Ингури.</Run>
+                                </Paragraph>
+                                <Paragraph Style="{StaticResource standart}">
+                                    <Run>Благодаря своему положению (на стыке Европы и Азии, субтропическго, умеренного и аридного типов климата) и высотной зональности Грузия имеет чрезвычайно разнообразные ландшафты (горные ледники, альпийские луга, леса и субтропики), природу, растительный и животный мир. Климат - переходный, от умеренного до субтропического.</Run>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource standart}">
+                                    <Floater Width="520" HorizontalAlignment="Left" Padding="0">
+                                        <BlockUIContainer>
+                                            <Border Height="300" Style="{StaticResource border}">
+                                                <Border.Background>
+                                                    <ImageBrush Stretch="UniformToFill" ImageSource="image\3.jpg" />
+                                                </Border.Background>
+                                            </Border>
+                                        </BlockUIContainer>
+                                    </Floater>
+                                </Paragraph>
+                                <Paragraph Style="{StaticResource standart}">
+                                    <Run>Осадков в Западной Грузии выпадает намного больше, чем в Восточной. Снег выпадает преимущественно в горных районах в ноябре и не тает до конца весны. Климат Грузии благоприятен для круглогодичного отдыха и лечения, природа балует постоянным изобилием свежих фруктов и овощей, что особенно важно для приезжих жителей северных регионов и территорий с неблагополучной экологией.</Run>
+                                </Paragraph>
+                                <Paragraph Style="{StaticResource standart}">
+                                    <Run>Идеальное время для посещения Грузии - май-июнь и сентябрь. В это время обычно царит отличная погода, не так много туристов, а цены на отели приемлемые. В Тбилиси и некоторых других городах июль и август могут быть довольно жаркими. На черноморские курорты лучше ехать с июля по октябрь.</Run>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+                <Paragraph Style="{StaticResource subtitle}">
+                    Административное деление
+                </Paragraph>
+                <Table CellSpacing="20">
+                    <Table.Columns>
+                        <TableColumn Width="*"/>
+                        <TableColumn Width="3*"/>
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource table}">
+                                    <Run FontFamily="Calibri Bold">Регионы</Run>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource table}">
+                                    <Run FontFamily="Calibri Bold">Описание</Run>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource table}">
+                                    Картли
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource table}">
+                                    Cердце Грузии, центр грузинской культуры. Здесь расположены древние города: Тбилиси, Мцхета и Гори.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource table}">
+                                    Риони
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource table}">
+                                    Центр Западной Грузии и территория древней Колхиды.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource table}">
+                                    Кахети
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource table}">
+                                    Плодородный регион с сухим климатом с живописными долинами, виноградниками и красивыми церквями.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource table}">
+                                    Юго-Западная Грузия
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource table}">
+                                    Субтропики и курорты Чёрного моря.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource table}">
+                                    Северо-Западная Грузия
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource table}">
+                                    Хребты Большого Кавказа.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource table}">
+                                    Самцхе-Джавахети
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Style="{StaticResource table}">
+                                    Район с большим количеством армянского этнического населения и интересными достопримечательностями.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+            </FlowDocument>
+        </FlowDocumentReader>
+    </Grid>
+</Window>
